@@ -1,0 +1,1005 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datopy._examples &#8212; datopy manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=f539c95a"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/datopy/_examples';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bainmatt.github.io/datopy/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">datopy manual</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">datopy._examples</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for datopy._examples</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A home for one-off tests and data-generating routines.</span>
+
+<span class="sd">.. warning:: The contents of this module will be moved in a future release.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># --- My retrieve/process/load (ETL) &amp; model/validation process for APIs ---</span>
+<span class="c1"># 1a) Identify your topic, fields of interest, source, and tools</span>
+<span class="c1"># 1b) Access the relevant API and familiarize</span>
+<span class="c1"># 2a) Implement a quick-and-dirty Processor subclass for retrieved objects</span>
+<span class="c1"># 2b) Construct 1-2 representative examples for testing and documentation</span>
+<span class="c1"># 3a) Implement a Pydantic data model that is robust and reflects your needs</span>
+<span class="c1"># 3b) Refine your quick-and-dirty Processor and incorporate data validation</span>
+<span class="c1"># Play around with the data before moving on to more sophisticated analysis</span>
+
+<span class="c1"># --- Data model considerations ---</span>
+<span class="c1"># - Fields: descriptions, required entries</span>
+<span class="c1"># - Type-specific: num (range), str (regex), cat (options)</span>
+<span class="c1"># - List-like container types: uniformity of elements, length, options, order</span>
+
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">jsonschema</span> <span class="kn">import</span> <span class="n">validate</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">NamedTuple</span>
+
+<span class="kn">import</span> <span class="nn">imdb</span>
+<span class="kn">import</span> <span class="nn">spotipy</span>
+<span class="kn">import</span> <span class="nn">wptools</span>
+<span class="kn">from</span> <span class="nn">imdb</span> <span class="kn">import</span> <span class="n">Cinemagoer</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">spotipy.oauth2</span> <span class="kn">import</span> <span class="n">SpotifyClientCredentials</span>
+
+<span class="c1"># import datopy._settings</span>
+<span class="kn">from</span> <span class="nn">datopy.models.media</span> <span class="kn">import</span> <span class="n">Film</span><span class="p">,</span> <span class="n">Album</span><span class="p">,</span> <span class="n">Book</span>
+<span class="kn">from</span> <span class="nn">datopy.etl</span> <span class="kn">import</span> <span class="n">omit_string_patterns</span>
+<span class="kn">from</span> <span class="nn">datopy.workflow</span> <span class="kn">import</span> <span class="n">doctest_function</span>
+<span class="kn">from</span> <span class="nn">datopy.modeling</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">apply_recursive</span><span class="p">,</span> <span class="n">list_to_dict</span><span class="p">,</span> <span class="n">schema_jsonify</span>
+<span class="p">)</span>
+
+<span class="c1"># Define custom types</span>
+<span class="n">DataModel</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;DataModel&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;obj&#39;</span><span class="p">,</span> <span class="s1">&#39;schema&#39;</span><span class="p">,</span> <span class="s1">&#39;json_schema&#39;</span><span class="p">,</span>
+                                     <span class="s1">&#39;serialized&#39;</span><span class="p">,</span> <span class="s1">&#39;normalized&#39;</span><span class="p">])</span>
+
+<span class="c1"># Define paths</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># The __file__ variable is only accessible at runtime</span>
+    <span class="n">file_dir</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="c1"># If __file__ is not defined, use a fallback directory</span>
+    <span class="c1"># cwd = pathlib.Path().resolve()</span>
+    <span class="n">file_dir</span> <span class="o">=</span> <span class="s1">&#39;src/datopy/&#39;</span>
+
+
+<span class="c1"># TODO add &#39;see also&#39; sections for required imports from other modules in proj</span>
+<span class="c1"># TODO rename this to _example_auto_datamodels ?</span>
+
+
+<span class="c1"># ---------------</span>
+<span class="c1"># --- Helpers ---</span>
+<span class="c1"># ---------------</span>
+
+<span class="c1"># TODO refactor later into SubProcessor</span>
+
+<div class="viewcode-block" id="spotify_album_retrieve">
+<a class="viewcode-back" href="../../datopy/datopy._examples.spotify_album_retrieve.html#datopy._examples.spotify_album_retrieve">[docs]</a>
+<span class="k">def</span> <span class="nf">spotify_album_retrieve</span><span class="p">(</span><span class="n">album</span><span class="p">:</span> <span class="n">Album</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Spotify album metadata retrieval routine.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">spotipy</span><span class="o">.</span><span class="n">Spotify</span><span class="p">(</span>
+        <span class="n">client_credentials_manager</span><span class="o">=</span><span class="n">SpotifyClientCredentials</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+        <span class="n">q</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;artist:</span><span class="si">{</span><span class="n">album</span><span class="o">.</span><span class="n">artist</span><span class="si">}</span><span class="s1"> album:</span><span class="si">{</span><span class="n">album</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;album&#39;</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;albums&#39;</span><span class="p">][</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No result found for </span><span class="si">{</span><span class="n">album</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+    <span class="n">album_results</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;albums&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">album_id</span> <span class="o">=</span> <span class="n">album_results</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="n">album_details</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">album</span><span class="p">(</span><span class="n">album_id</span><span class="p">)</span>
+    <span class="n">tracks</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">album_tracks</span><span class="p">(</span><span class="n">album_id</span><span class="p">)[</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Retrieve additional track details</span>
+    <span class="n">track_audio_features_tmp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">track_streams_tmp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">track_num</span><span class="p">,</span> <span class="n">track_info</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tracks</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">track_id</span> <span class="o">=</span> <span class="n">track_info</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+        <span class="c1"># sp.audio_analysis(track_id)</span>
+        <span class="n">track_audio_features_tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">audio_features</span><span class="p">(</span><span class="n">track_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">track_streams_tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">track_id</span><span class="p">)[</span><span class="s1">&#39;popularity&#39;</span><span class="p">])</span>
+
+    <span class="n">track_audio_features</span> <span class="o">=</span> <span class="n">list_to_dict</span><span class="p">(</span><span class="n">track_audio_features_tmp</span><span class="p">)</span>
+    <span class="n">track_streams</span> <span class="o">=</span> <span class="n">list_to_dict</span><span class="p">(</span><span class="n">track_streams_tmp</span><span class="p">)</span>
+
+    <span class="c1"># Merge album details with additional track details</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">album_details</span><span class="p">)</span>
+    <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;track_audio_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">track_audio_features</span>
+    <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;track_streams&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">track_streams</span>
+
+    <span class="k">return</span> <span class="n">obj</span></div>
+
+
+
+<div class="viewcode-block" id="imdb_film_retrieve">
+<a class="viewcode-back" href="../../datopy/datopy._examples.imdb_film_retrieve.html#datopy._examples.imdb_film_retrieve">[docs]</a>
+<span class="k">def</span> <span class="nf">imdb_film_retrieve</span><span class="p">(</span><span class="n">film</span><span class="p">:</span> <span class="n">Film</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    IMDb film metadata retrieval routine.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ia</span> <span class="o">=</span> <span class="n">Cinemagoer</span><span class="p">()</span>
+    <span class="n">movies</span> <span class="o">=</span> <span class="n">ia</span><span class="o">.</span><span class="n">search_movie</span><span class="p">(</span><span class="n">film</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">movies</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No result found for </span><span class="si">{</span><span class="n">film</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">ia</span><span class="o">.</span><span class="n">get_movie</span><span class="p">(</span><span class="n">movies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">movieID</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">obj</span></div>
+
+
+
+<div class="viewcode-block" id="wiki_metadata_retrieve">
+<a class="viewcode-back" href="../../datopy/datopy._examples.wiki_metadata_retrieve.html#datopy._examples.wiki_metadata_retrieve">[docs]</a>
+<span class="k">def</span> <span class="nf">wiki_metadata_retrieve</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="n">Film</span> <span class="o">|</span> <span class="n">Album</span> <span class="o">|</span> <span class="n">Book</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">wptools</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">get_parse</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;infobox&#39;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No result found for </span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">obj</span></div>
+
+
+
+<div class="viewcode-block" id="extract_datamodel">
+<a class="viewcode-back" href="../../datopy/datopy._examples.extract_datamodel.html#datopy._examples.extract_datamodel">[docs]</a>
+<span class="k">def</span> <span class="nf">extract_datamodel</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataModel</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Construct a data model from a scraped data structure.</span>
+
+<span class="sd">    The constructed objects include dictionary elements,</span>
+<span class="sd">    a json-style schema of (key, type)/(key, value) pairs,</span>
+<span class="sd">    and a dataframe entry.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    obj : __type__</span>
+<span class="sd">        __description__</span>
+<span class="sd">    verbose : bool, default=False</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    schema :</span>
+<span class="sd">        __description__</span>
+<span class="sd">    json_schema :</span>
+<span class="sd">        __description__</span>
+<span class="sd">    obj_serialized :</span>
+<span class="sd">        __description__</span>
+<span class="sd">    obj_normalized :</span>
+<span class="sd">        __description__</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">schema</span> <span class="o">=</span> <span class="n">apply_recursive</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+    <span class="n">json_schema</span> <span class="o">=</span> <span class="n">schema_jsonify</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+    <span class="n">obj_serialized</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">apply_recursive</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">obj</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">obj_parsed</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">obj_serialized</span><span class="p">)</span>
+    <span class="n">obj_normalized</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">obj_parsed</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pp</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">obj</span><span class="p">),</span> <span class="n">depth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pp</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pp</span><span class="p">(</span><span class="n">obj_normalized</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">compact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">DataModel</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">json_schema</span><span class="p">,</span> <span class="n">obj_serialized</span><span class="p">,</span> <span class="n">obj_normalized</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="save_datamodel">
+<a class="viewcode-back" href="../../datopy/datopy._examples.save_datamodel.html#datopy._examples.save_datamodel">[docs]</a>
+<span class="k">def</span> <span class="nf">save_datamodel</span><span class="p">(</span>
+    <span class="n">schema</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">json_schema</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+    <span class="n">obj_serialized</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">obj_normalized</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">search_terms</span><span class="p">:</span> <span class="n">Film</span> <span class="o">|</span> <span class="n">Album</span> <span class="o">|</span> <span class="n">Book</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Save json-style schema of (key, type)/(key, value) pairs and a df.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">search_terms</span><span class="o">.</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="n">medium</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">search_terms</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+
+    <span class="n">schema_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file_dir</span><span class="si">}</span><span class="s2">/output/</span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">medium</span><span class="si">}</span><span class="s2">_schema.json&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">schema_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">json_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">json_schema_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;output/</span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">medium</span><span class="si">}</span><span class="s2">_json_schema.json&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">json_schema_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">json_schema</span><span class="p">,</span> <span class="n">json_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">obj_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;output/</span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">_obj.json&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">obj_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+        <span class="n">json_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">obj_serialized</span><span class="p">))</span>
+
+    <span class="n">df_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;output/</span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">_df.csv&quot;</span>
+    <span class="n">obj_normalized</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">df_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+
+<span class="c1"># --------------------------------------------</span>
+<span class="c1"># --- Data dictionary retrieval/extraction ---</span>
+<span class="c1"># --------------------------------------------</span>
+
+<div class="viewcode-block" id="run_auto_datamodel_example">
+<a class="viewcode-back" href="../../datopy/datopy._examples.run_auto_datamodel_example.html#datopy._examples.run_auto_datamodel_example">[docs]</a>
+<span class="k">def</span> <span class="nf">run_auto_datamodel_example</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;spotify&#39;</span><span class="p">,</span> <span class="s1">&#39;wiki&#39;</span><span class="p">],</span>
+    <span class="n">search_terms</span><span class="p">:</span> <span class="n">Film</span> <span class="o">|</span> <span class="n">Album</span> <span class="o">|</span> <span class="n">Book</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">do_save</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataModel</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate an exemplar data model from an API-extracted data structure.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    source : Literal[&#39;imdb&#39;, &#39;spotify&#39;, &#39;wiki&#39;])</span>
+<span class="sd">        The source from which to retrieve data about the requested topic.</span>
+<span class="sd">    search_terms : Film | Album | Book</span>
+<span class="sd">        A namedtuple of required properties (e.g., title) for the topic query.</span>
+<span class="sd">    verbose : bool, default=False</span>
+<span class="sd">        Option to enable printouts of the retrieved data and schema.</span>
+<span class="sd">    do_save : bool, default=False</span>
+<span class="sd">        Option to enable saving of the retrieved data and schema.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    obj :</span>
+<span class="sd">        __description__</span>
+<span class="sd">    (__tuple__) :</span>
+<span class="sd">        Output of extract_datamodel.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. code-block:: python doctest</span>
+
+<span class="sd">    Setup</span>
+
+<span class="sd">    &gt;&gt;&gt; import re</span>
+<span class="sd">    &gt;&gt;&gt; from datopy._examples import run_auto_datamodel_example</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.etl import omit_string_patterns</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.models.media import Album, Book, Film</span>
+
+<span class="sd">    &gt;&gt;&gt; do_save=False</span>
+
+<span class="sd">    IMDb film</span>
+
+<span class="sd">    .. doctest::</span>
+<span class="sd">        :skipif: skip_slow</span>
+
+<span class="sd">        &gt;&gt;&gt; film = Film(&quot;eternal sunshine of the spotless mind&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; datamodel = run_auto_datamodel_example(</span>
+<span class="sd">        ...     source=&quot;imdb&quot;, search_terms=film,</span>
+<span class="sd">        ...     verbose=False, do_save=do_save)</span>
+<span class="sd">        &gt;&gt;&gt; dict(datamodel.obj)[&#39;genres&#39;]</span>
+<span class="sd">        [&#39;Drama&#39;, &#39;Romance&#39;, &#39;Sci-Fi&#39;]</span>
+<span class="sd">        &gt;&gt;&gt; datamodel.schema[&#39;genres&#39;]</span>
+<span class="sd">        {1: &#39;str&#39;, 2: &#39;str&#39;, 3: &#39;str&#39;}</span>
+<span class="sd">        &gt;&gt;&gt; datamodel.normalized[&#39;original air date&#39;][0]</span>
+<span class="sd">        &#39;19 Mar 2004 (USA)&#39;</span>
+
+<span class="sd">    Spotify album</span>
+
+<span class="sd">    .. doctest::</span>
+<span class="sd">        :skipif: skip_slow</span>
+
+<span class="sd">        ..</span>
+<span class="sd">            # &gt;&gt;&gt; album = Album(&quot;kid A&quot;, &quot;radiohead&quot;)</span>
+<span class="sd">            # &gt;&gt;&gt; datamodel = run_auto_datamodel_example(</span>
+<span class="sd">            # ...     source=&quot;spotify&quot;, search_terms=album, do_save=do_save)</span>
+<span class="sd">            # &gt;&gt;&gt; datamodel.obj[&#39;total_tracks&#39;]</span>
+<span class="sd">            # 11</span>
+<span class="sd">            # &gt;&gt;&gt; datamodel.schema[&#39;total_tracks&#39;]</span>
+<span class="sd">            # &#39;int&#39;</span>
+<span class="sd">            # &gt;&gt;&gt; datamodel.normalized[&#39;id&#39;][0]</span>
+<span class="sd">            # &#39;6GjwtEZcfenmOf6l18N7T7&#39;</span>
+
+<span class="sd">    Wikipedia novel</span>
+
+<span class="sd">    .. doctest::</span>
+<span class="sd">        :skipif: skip_slow</span>
+
+<span class="sd">        &gt;&gt;&gt; book = Book(&quot;to kill a mockingbird&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; outputs = run_auto_datamodel_example(</span>
+<span class="sd">        ...    source=&quot;wiki&quot;, search_terms=book, do_save=do_save)</span>
+<span class="sd">        &gt;&gt;&gt; re.search(r&#39;\[\[(.*?)\]\]&#39;, outputs.obj[&#39;author&#39;]).group(1)</span>
+<span class="sd">        &#39;Harper Lee&#39;</span>
+<span class="sd">        &gt;&gt;&gt; outputs.schema[&#39;author&#39;]</span>
+<span class="sd">        &#39;str&#39;</span>
+<span class="sd">        &gt;&gt;&gt; outputs.normalized[&#39;pages&#39;][0]</span>
+<span class="sd">        &#39;281&#39;</span>
+
+<span class="sd">    Wikipedia film</span>
+
+<span class="sd">    .. doctest::</span>
+<span class="sd">        :skipif: skip_slow</span>
+
+<span class="sd">        &gt;&gt;&gt; film = Film(&quot;eternal sunshine of the spotless mind&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; outputs = run_auto_datamodel_example(</span>
+<span class="sd">        ...    source=&quot;wiki&quot;, search_terms=film, do_save=do_save)</span>
+<span class="sd">        &gt;&gt;&gt; re.search(r&#39;\[\[(.*?) \]\]&#39;, outputs.obj[&#39;director&#39;]).group(1)</span>
+<span class="sd">        &#39;Michel Gondry&#39;</span>
+<span class="sd">        &gt;&gt;&gt; outputs.schema[&#39;director&#39;]</span>
+<span class="sd">        &#39;str&#39;</span>
+<span class="sd">        &gt;&gt;&gt; outputs.normalized[&#39;budget&#39;][0]</span>
+<span class="sd">        &#39;$20 million&#39;</span>
+
+<span class="sd">    Wikipedia album</span>
+
+<span class="sd">    .. doctest::</span>
+<span class="sd">        :skipif: skip_slow</span>
+
+<span class="sd">        &gt;&gt;&gt; album = Album(&quot;kid A&quot;, &quot;radiohead&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; outputs = run_auto_datamodel_example(</span>
+<span class="sd">        ...    source=&quot;wiki&quot;, search_terms=album, do_save=do_save)</span>
+<span class="sd">        &gt;&gt;&gt; genres_raw = outputs.obj[&#39;genre&#39;]</span>
+<span class="sd">        &gt;&gt;&gt; patterns_to_omit = [&quot;[[&quot;, &quot;* &quot;, &quot; * &quot;, &quot;\n&quot;, &quot;{{nowrap|&quot;, &quot;}}&quot;]</span>
+<span class="sd">        &gt;&gt;&gt; genres_processed = omit_string_patterns(</span>
+<span class="sd">        ...     genres_raw, patterns_to_omit)</span>
+<span class="sd">        &gt;&gt;&gt; print(genres_processed.replace(&quot;]]&quot;, &quot;, &quot;).rstrip(&quot;, &quot;))</span>
+<span class="sd">        Experimental rock, post-rock, art rock, electronica, alternative rock</span>
+<span class="sd">        &gt;&gt;&gt; outputs.schema[&#39;genre&#39;]</span>
+<span class="sd">        &#39;str&#39;</span>
+<span class="sd">        &gt;&gt;&gt; outputs.normalized[&#39;type&#39;][0]</span>
+<span class="sd">        &#39;studio&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check assumptions</span>
+    <span class="c1"># TODO remove line below (redundant)</span>
+    <span class="c1"># source = str(source).lower()</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Source must be either &#39;imdb&#39;, &#39;spotify&#39;, or &#39;wiki&#39;.&quot;</span>
+    <span class="k">assert</span> <span class="n">source</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;spotify&#39;</span><span class="p">,</span> <span class="s1">&#39;wiki&#39;</span><span class="p">],</span> <span class="n">message</span>
+
+    <span class="c1"># TODO refactor retrieval w/ retrieve method of resp Processor subclasses</span>
+    <span class="c1"># Movie</span>
+    <span class="k">if</span> <span class="n">source</span> <span class="o">==</span> <span class="s1">&#39;imdb&#39;</span><span class="p">:</span>
+        <span class="n">ia</span> <span class="o">=</span> <span class="n">Cinemagoer</span><span class="p">()</span>
+        <span class="n">movies</span> <span class="o">=</span> <span class="n">ia</span><span class="o">.</span><span class="n">search_movie</span><span class="p">(</span><span class="n">search_terms</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">movies</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No result found for </span><span class="si">{</span><span class="n">search_terms</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">ia</span><span class="o">.</span><span class="n">get_movie</span><span class="p">(</span><span class="n">movies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">movieID</span><span class="p">)</span>
+
+    <span class="c1"># Album</span>
+    <span class="k">elif</span> <span class="n">source</span> <span class="o">==</span> <span class="s1">&#39;spotify&#39;</span><span class="p">:</span>
+        <span class="n">sp</span> <span class="o">=</span> <span class="n">spotipy</span><span class="o">.</span><span class="n">Spotify</span><span class="p">(</span>
+            <span class="n">client_credentials_manager</span><span class="o">=</span><span class="n">SpotifyClientCredentials</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="n">q</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;artist:</span><span class="si">{</span><span class="n">search_terms</span><span class="o">.</span><span class="n">artist</span><span class="si">}</span><span class="s1"> album:</span><span class="si">{</span><span class="n">search_terms</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;album&#39;</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;albums&#39;</span><span class="p">][</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No result found for </span><span class="si">{</span><span class="n">search_terms</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+        <span class="n">album_results</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;albums&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">album_id</span> <span class="o">=</span> <span class="n">album_results</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+        <span class="n">album_details</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">album</span><span class="p">(</span><span class="n">album_id</span><span class="p">)</span>
+        <span class="n">tracks</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">album_tracks</span><span class="p">(</span><span class="n">album_id</span><span class="p">)[</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Retrieve additional track details</span>
+        <span class="n">track_audio_features_tmp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">track_streams_tmp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">track_num</span><span class="p">,</span> <span class="n">track_info</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tracks</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">track_id</span> <span class="o">=</span> <span class="n">track_info</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+            <span class="c1"># sp.audio_analysis(track_id)</span>
+            <span class="n">track_audio_features_tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">audio_features</span><span class="p">(</span><span class="n">track_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">track_streams_tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">track_id</span><span class="p">)[</span><span class="s1">&#39;popularity&#39;</span><span class="p">])</span>
+
+        <span class="n">track_audio_features</span> <span class="o">=</span> <span class="n">list_to_dict</span><span class="p">(</span><span class="n">track_audio_features_tmp</span><span class="p">)</span>
+        <span class="n">track_streams</span> <span class="o">=</span> <span class="n">list_to_dict</span><span class="p">(</span><span class="n">track_streams_tmp</span><span class="p">)</span>
+
+        <span class="c1"># Merge album details with additional track details</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">album_details</span><span class="p">)</span>
+        <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;track_audio_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">track_audio_features</span>
+        <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;track_streams&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">track_streams</span>
+
+    <span class="c1"># Books etc.</span>
+    <span class="k">elif</span> <span class="n">source</span> <span class="o">==</span> <span class="s1">&#39;wiki&#39;</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">wptools</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">search_terms</span><span class="o">.</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">get_parse</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;infobox&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No result found for </span><span class="si">{</span><span class="n">search_terms</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># Extract &amp; save</span>
+    <span class="n">datamodel</span> <span class="o">=</span> <span class="n">extract_datamodel</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">do_save</span><span class="p">:</span>
+        <span class="n">save_datamodel</span><span class="p">(</span><span class="n">datamodel</span><span class="o">.</span><span class="n">schema</span><span class="p">,</span> <span class="n">datamodel</span><span class="o">.</span><span class="n">json_schema</span><span class="p">,</span>
+                       <span class="n">datamodel</span><span class="o">.</span><span class="n">serialized</span><span class="p">,</span> <span class="n">datamodel</span><span class="o">.</span><span class="n">normalized</span><span class="p">,</span>
+                       <span class="n">source</span><span class="p">,</span> <span class="n">search_terms</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">datamodel</span></div>
+
+
+
+<span class="c1"># ---------------------------------------</span>
+<span class="c1"># --- Pitfalls of raw data validation ---</span>
+<span class="c1"># ---------------------------------------</span>
+
+<span class="c1"># Generally opt for manually defined schemas for retrieved data. Data</span>
+<span class="c1"># is messy and unpredictable and every automated attempt will either screw up</span>
+<span class="c1"># edge cases or overlook nuances/quirks (Ex: an integer dressed up as a string,</span>
+<span class="c1"># masquerading as an iterable).</span>
+<span class="c1">#</span>
+<span class="c1"># Most importantly, do NOT try to validate all the data coming in! Just build a</span>
+<span class="c1"># robust retrieval system and validate everything before loading into your DBS.</span>
+<span class="c1"># As cool as it would be to seamlessly validate incoming data against</span>
+<span class="c1"># auto-generated schemas, this is (1) really messy and (2) highly unnecessary.</span>
+<span class="c1">#</span>
+<span class="c1"># Instead use these tools to quickly grasp the structure of retrieved data and</span>
+<span class="c1"># build comprehensive Pydantic models that fully suit your downstream needs!</span>
+
+<span class="k">def</span> <span class="nf">_run_messy_example</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An example of messy, highly unnecessary testing of retrieved data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># obj = spotify_album_retrieve(Album(&quot;kid a&quot;, &quot;radiohead&quot;))</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;output/spotify_album_json_schema.json&#39;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">))</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">album_schema</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">album_schema</span>
+    <span class="c1"># This line raises an error</span>
+    <span class="c1"># validate(instance=obj, schema=album_schema)</span>
+
+
+<span class="k">def</span> <span class="nf">_run_idealized_example</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An idealized example to demonstrate json validation in theory</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;models/output/imdb_model.json&#39;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">))</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">movie_schema</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="n">valid_raw_movie</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;green eggs and ham&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1904</span><span class="p">,</span> <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;movie&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;director&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jill Smith&quot;</span><span class="p">}}</span>
+    <span class="p">}</span>
+
+    <span class="c1"># The second line raises an error</span>
+    <span class="c1"># invalid_raw_movie = {&quot;name&quot;: 1, &quot;price&quot;: 34.99}</span>
+    <span class="n">validate</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">valid_raw_movie</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">movie_schema</span><span class="p">)</span>
+    <span class="c1"># validate(instance=invalid_raw_movie, schema=movie_schema)</span>
+
+    <span class="k">return</span> <span class="n">movie_schema</span><span class="p">,</span> <span class="n">valid_raw_movie</span>
+
+<span class="c1"># ---------------------------------</span>
+<span class="c1"># --- Processed data validation ---</span>
+<span class="c1"># ---------------------------------</span>
+
+<span class="c1"># TODO consider adding later: IUCNSpecies metadata, WBankNation metadata</span>
+<span class="c1"># IUCN: https://pypi.org/project/IUCN-API/</span>
+<span class="c1"># Consult: https://www.kaggle.com/code/saiulluri/creating-a-wildlife-database</span>
+<span class="c1"># WBank: https://pypi.org/project/wbgapi/#description</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Comment out (2) to run all tests in script; (1) to run specific tests</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># doctest_function(run_auto_datamodel_example, globs=globals(),verbose=False)</span>
+
+    <span class="c1"># One-off tests</span>
+    <span class="k">pass</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Matthew Bain.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

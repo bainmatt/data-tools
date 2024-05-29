@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datopy.stylesheet &#8212; datopy manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=f539c95a"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/datopy/stylesheet';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bainmatt.github.io/datopy/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">datopy manual</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">datopy.stylesheet</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for datopy.stylesheet</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Plotting utilities and matplotlib rcParams customization.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">cycler</span> <span class="kn">import</span> <span class="n">cycler</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># from matplotlib.colors import ListedColormap</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="c1"># plt.close()</span>
+<span class="c1"># x = np.linspace(0, 1, 20)</span>
+<span class="c1"># cmap = mpl.colormaps.get_cmap(&quot;viridis&quot;).resampled(20)</span>
+<span class="c1"># plt.imshow(x[:, np.newaxis].T, cmap=cmap)</span>
+<span class="c1"># plt.axis(&#39;off&#39;)</span>
+<span class="c1"># plt.show()</span>
+
+
+<div class="viewcode-block" id="outputoff">
+<a class="viewcode-back" href="../../datopy/datopy.stylesheet.outputoff.html#datopy.stylesheet.outputoff">[docs]</a>
+<span class="k">class</span> <span class="nc">outputoff</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Define context in which all outputs are suppressed.</span>
+
+<span class="sd">    Intended for use with pyplot to suppress intermittent printouts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span>
+        <span class="c1"># Redirect stdout to null device</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            exc_type  : Exception type</span>
+<span class="sd">            exc_value : Exception value</span>
+<span class="sd">            traceback : Traceback</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stdout</span></div>
+
+
+
+<span class="c1"># TODO clean up plot examples using approach like this:</span>
+<span class="c1"># https://github.com/arviz-devs/arviz/blob/main/arviz/plots/autocorrplot.py</span>
+<span class="c1"># https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot</span>
+
+<div class="viewcode-block" id="customize_plots">
+<a class="viewcode-back" href="../../datopy/datopy.stylesheet.customize_plots.html#datopy.stylesheet.customize_plots">[docs]</a>
+<span class="k">def</span> <span class="nf">customize_plots</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set custom matplotlib rcParams.</span>
+
+<span class="sd">    Handles default styling for all matplotlib plotting functions and</span>
+<span class="sd">    functions built upon matplotlib (e.g., Seaborn plotters).</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Contrast with the default matplotlib rc file:</span>
+<span class="sd">    https://matplotlib.org/stable/users/explain/customizing.html#the-matplotlibrc-file.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. code-block:: python plot</span>
+<span class="sd">    .. plot::</span>
+<span class="sd">        :context: close-figs</span>
+
+<span class="sd">        &gt;&gt;&gt; import matplotlib</span>
+<span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
+<span class="sd">        &gt;&gt;&gt; from datopy.stylesheet import customize_plots</span>
+
+<span class="sd">        Define some data</span>
+
+<span class="sd">        &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">        &gt;&gt;&gt; x = np.linspace(0, 2 * np.pi, 1000)</span>
+
+<span class="sd">        Define a couple plotting functions</span>
+
+<span class="sd">        &gt;&gt;&gt; def single_panel_plot(x):</span>
+<span class="sd">        ...     ax = plt.subplot(111)</span>
+<span class="sd">        ...     ax.plot(x, np.sin(x), label=&quot;$sin(x)$&quot;)</span>
+<span class="sd">        ...     ax.plot(x, np.cos(x), label=&quot;$cos(x)$&quot;)</span>
+<span class="sd">        ...     ax.set(xlabel=&quot;$x$&quot;, frame_on=False)</span>
+<span class="sd">        ...     ax.set_ylabel(&quot;$f(x)$&quot;, rotation=0)</span>
+<span class="sd">        ...     ax.legend()</span>
+<span class="sd">        ...     ax.grid()</span>
+<span class="sd">        ...     plt.show()</span>
+
+<span class="sd">        &gt;&gt;&gt; def multi_panel_plot(x):</span>
+<span class="sd">        ...     fig, axs = plt.subplots(2, 2, sharex=True, sharey=True)</span>
+<span class="sd">        ...     axs = axs.flatten()</span>
+<span class="sd">        ...     for i, ax in enumerate(axs, start=1):</span>
+<span class="sd">        ...         ax.plot(x, np.sin(i/2 * x))</span>
+<span class="sd">        ...         ax.plot(x, np.cos(i/2 * x))</span>
+<span class="sd">        ...         ax.text(</span>
+<span class="sd">        ...             max(x) - 0.1, -1 + 0.1,</span>
+<span class="sd">        ...             f&quot;$a = {i/2}$&quot;,</span>
+<span class="sd">        ...             size=12,</span>
+<span class="sd">        ...             ha=&quot;right&quot;,</span>
+<span class="sd">        ...             bbox={</span>
+<span class="sd">        ...                 &quot;boxstyle&quot;: &quot;round&quot;,</span>
+<span class="sd">        ...                 &quot;alpha&quot;: 0.8,</span>
+<span class="sd">        ...                 &quot;facecolor&quot;: &quot;white&quot;,</span>
+<span class="sd">        ...             }</span>
+<span class="sd">        ...         )</span>
+<span class="sd">        ...         ax.grid()</span>
+<span class="sd">        ...     fig.supylabel(&quot;$f(x)$&quot;, rotation=0)</span>
+<span class="sd">        ...     fig.supxlabel(&quot;$x$&quot;, x=.5)</span>
+<span class="sd">        ...     axs[0].legend(</span>
+<span class="sd">        ...         labels=[&quot;$sin(ax)$&quot;, &quot;$cos(ax)$&quot;],</span>
+<span class="sd">        ...         ncol=1,</span>
+<span class="sd">        ...         loc=&quot;lower left&quot;,</span>
+<span class="sd">        ...     )</span>
+<span class="sd">        ...     plt.show()</span>
+
+<span class="sd">        Create the plots</span>
+
+<span class="sd">        ..</span>
+<span class="sd">            # The first two examples are before styling;</span>
+<span class="sd">            # the following two are after styling.</span>
+<span class="sd">            # &gt;&gt;&gt; single_panel_plot()  # /doctest: +SKIP</span>
+<span class="sd">            # &gt;&gt;&gt; multi_panel_plot()  # /doctest: +SKIP</span>
+
+<span class="sd">        &gt;&gt;&gt; customize_plots()</span>
+<span class="sd">        &gt;&gt;&gt; single_panel_plot(x)  # /doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt; multi_panel_plot(x)  # /doctest: +SKIP</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># --- General properties ---</span>
+
+    <span class="c1"># Font face and sizes</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sans-serif&#39;</span>
+    <span class="c1"># NOTE will need to be reverted to the default for use in a notebook.</span>
+    <span class="c1"># mpl.rcParams[&#39;font.sans-serif&#39;] = &quot;Verdana&quot;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>               <span class="c1"># default font sizes</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.titlesize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>         <span class="c1"># large</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>         <span class="c1"># medium</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>        <span class="c1"># medium</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>        <span class="c1"># medium</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>        <span class="c1"># medium</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.title_fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">11</span>  <span class="c1"># None (same as default axes)</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.titlesize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>       <span class="c1"># large (suptitle size)</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.labelsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>       <span class="c1"># large (sup[x|y]label size)</span>
+
+    <span class="c1"># Spines and ticks</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.spines.top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.spines.right&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.7</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.edgecolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;out&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;xtick.major.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c1"># default: 3.5</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;ytick.major.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c1"># default: 3.5</span>
+    <span class="c1"># mpl.rcParams[&#39;xtick.major.width&#39;] =  0.8</span>
+    <span class="c1"># mpl.rcParams[&#39;ytick.major.width&#39;] =  0.8</span>
+
+    <span class="c1"># Grid</span>
+    <span class="c1"># lines at {major, minor, both} ticks</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.grid.which&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;major&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;grid.linestyle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;grid.color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;#CCCCCC&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;grid.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.8</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;grid.alpha&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.2</span>
+
+    <span class="c1"># Label placement</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.titlelocation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>  <span class="c1"># {left, right, center}</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.titlepad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># 6</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.labelpad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># 4</span>
+    <span class="c1"># mpl.rcParams[&#39;xtick.major.pad&#39;] = 3.5  # dist to major tick label in pts</span>
+    <span class="c1"># mpl.rcParams[&#39;ytick.major.pad&#39;] = 3.5</span>
+
+    <span class="c1"># Discrete color cycle (and continuous map)</span>
+    <span class="c1"># mpl.rcParams[&#39;axes.prop_cycle&#39;] = cycler(</span>
+    <span class="c1">#     color=[&#39;#1f77b4&#39;, &#39;#ff7f0e&#39;, &#39;#2ca02c&#39;, &#39;#d62728&#39;]</span>
+    <span class="c1"># )</span>
+    <span class="c1"># mpl.rcParams[&#39;axes.prop_cycle&#39;] = cycler(</span>
+    <span class="c1">#     color=sns.color_palette(&quot;PiYG&quot;, n_colors=6)</span>
+    <span class="c1"># )</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">PiYG</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">.85</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># type: ignore</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Legend properties</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.loc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.frameon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.loc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span>
+
+    <span class="c1"># Legend padding</span>
+    <span class="c1"># mpl.rcParams[&#39;legend.borderpad&#39;] =  0.4     # border whitespace</span>
+    <span class="c1"># mpl.rcParams[&#39;legend.labelspacing&#39;] = 0.5   # vert space between entries</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.handlelength&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.35</span>    <span class="c1"># length of the legend lines</span>
+    <span class="c1"># mpl.rcParams[&#39;legend.handleheight&#39;] = 0.7   # height of the legend handle</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.handletextpad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.8</span>    <span class="c1"># space btwn leg lines/text</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.borderaxespad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>    <span class="c1"># border btwn axes/leg edge</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.columnspacing&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>    <span class="c1"># column separation</span>
+
+    <span class="c1"># Space-filling object properties (e.g., polygons/circles, bars/scatter)</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.edgecolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>  <span class="c1"># if forced, else not filled</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.force_edgecolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.4</span>       <span class="c1"># edgewidth (default: .5)</span>
+
+    <span class="c1"># --- Object-specific properties ---</span>
+
+    <span class="c1"># Scatter properties</span>
+    <span class="c1"># mpl.rcParams[&#39;scatter.edgecolors&#39;] = &#39;black&#39;  # alt: &#39;face&#39; (match edges)</span>
+
+    <span class="c1"># Line properties</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.markersize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="c1"># Bar properties</span>
+    <span class="c1"># NOTE No global styling parameter exists for the following:</span>
+    <span class="c1"># mpl.rcParams[&#39;bar.width&#39;] = 0.8</span>
+
+    <span class="c1"># Error properties</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;errorbar.capsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="c1"># NOTE No global styling parameter exists for the following:</span>
+    <span class="c1"># mpl.rcParams[&#39;errorbar.color&#39;] = &#39;black&#39;</span>
+    <span class="c1"># mpl.rcParams[&#39;errorbar.linewidth&#39;] = 1.5</span>
+
+    <span class="c1"># Contour properties</span>
+    <span class="c1"># if `none`, falls back to line.linewidth</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;contour.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># Histogram properties</span>
+    <span class="c1"># hist.bins: 10  # the default number of histogram bins or &#39;auto&#39;</span>
+
+    <span class="c1"># Box properties</span>
+    <span class="c1"># box</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.boxprops.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>      <span class="c1"># box outline (0.5)</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.boxprops.color&#39;] = &#39;none&#39;   # alt: &#39;black&#39; (check)</span>
+
+    <span class="c1"># box line to cap</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.whiskerprops.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.65</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.whiskerprops.linestyle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.whiskerprops.color&#39;] = &#39;black&#39;          # (check)</span>
+
+    <span class="c1"># box cap line</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.capprops.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.75</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.capprops.color&#39;] = &#39;black&#39;              # (check)</span>
+
+    <span class="c1"># box median line</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.medianprops.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.medianprops.linestyle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.medianprops.color&#39;] = &#39;black&#39;           # (check)</span>
+
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.meanprops.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.meanprops.linestyle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.meanprops.color&#39;] = &#39;black&#39;             # (check)</span>
+
+    <span class="c1"># box scatter</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.flierprops.markerfacecolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.flierprops.markeredgewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.65</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;boxplot.flierprops.marker&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.flierprops.markersize&#39;] = 6             # (check)</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.flierprops.linewidth&#39;] = 0              # (check)</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.flierprops.markeredgecolor&#39;] = &#39;black&#39;  # (check)</span>
+    <span class="c1"># mpl.rcParams[&#39;boxplot.flierprops.color&#39;] = &#39;black&#39;            # (check)</span>
+
+    <span class="c1"># --- Figure padding ---</span>
+
+    <span class="c1"># Figure layout</span>
+    <span class="c1"># auto-make plot elements fit on figure</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.autolayout&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.constrained_layout.use&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># apply tight layout</span>
+
+    <span class="c1"># Subplot padding (all dims are a fraction of the fig width and height)/</span>
+    <span class="c1"># NOTE not compatible with constrained_layout.</span>
+    <span class="c1">#</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.subplot.left&#39;] = .125    # left side</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.subplot.right&#39;] = 0.9    # right side of subplots</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.subplot.bottom&#39;] = 0.11  # bottom of subplots</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.subplot.top&#39;] = 0.88     # top of subplots</span>
+
+    <span class="c1"># Reserved space between subplots</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.subplot.wspace&#39;] = 0.2   # width</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.subplot.hspace&#39;] = 0.2   # height</span>
+
+    <span class="c1"># Constrained layout padding (not compatible with autolayout)</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.constrained_layout.h_pad&#39;] = 0.04167</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.constrained_layout.w_pad&#39;] = 0.04167</span>
+
+    <span class="c1"># Constrained layout spacing between subplots, relative to subplot sizes.</span>
+    <span class="c1"># Is much smaller than tight_layout (figure.subplot.{hspace, wspace)</span>
+    <span class="c1"># as constrained_layout already takes surrounding text</span>
+    <span class="c1"># (titles, labels, # ticklabels) into account.</span>
+    <span class="c1"># NOTE not compatible with autolayout.</span>
+    <span class="c1">#</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.constrained_layout.hspace&#39;] = 0.02</span>
+    <span class="c1"># mpl.rcParams[&#39;figure.constrained_layout.wspace&#39;] = 0.02</span>
+
+    <span class="c1"># --- Other ---</span>
+
+    <span class="c1"># Figure size and quality</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>         <span class="c1"># NOTE Alters figure size</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># (6, 4), (6.4, 4.8)</span>
+
+    <span class="c1"># Figure saving settings</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;savefig.transparent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;savefig.format&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span>  <span class="c1"># {png, ps, pdf, svg}</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;savefig.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">330</span></div>
+
+
+    <span class="c1"># Set format/quality of inline figures in Jupyter notebooks</span>
+    <span class="c1"># %config InlineBackend.figure_format = &#39;svg&#39;</span>
+
+
+<div class="viewcode-block" id="customstyle">
+<a class="viewcode-back" href="../../datopy/datopy.stylesheet.customstyle.html#datopy.stylesheet.customstyle">[docs]</a>
+<span class="k">class</span> <span class="nc">customstyle</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Define plotting context given by :func:`datopy.stylesheet.customize_plots`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. code-block:: python plot</span>
+<span class="sd">    .. plot::</span>
+<span class="sd">        :context: close-figs</span>
+<span class="sd">        :width: 100%</span>
+<span class="sd">        :align: left</span>
+
+<span class="sd">    ..</span>
+<span class="sd">        # &gt;&gt;&gt; with customstyle():</span>
+<span class="sd">        # ...     plt.plot([1,2,3], [4,5,6])</span>
+<span class="sd">        # ...     plt.show()  # /doctest: +SKIP</span>
+
+<span class="sd">        # &gt;&gt;&gt; plt.plot([1,2,3], [4,5,6]) # doctest: +SKIP</span>
+<span class="sd">        # &gt;&gt;&gt; plt.show()  # /doctest: +SKIP</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO ?package customize_plots with context manager</span>
+        <span class="c1"># to avoid circular dependency and double execution.</span>
+        <span class="kn">from</span> <span class="nn">datopy.stylesheet</span> <span class="kn">import</span> <span class="n">customize_plots</span>
+        <span class="n">customize_plots</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">exc</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+    <span class="kn">from</span> <span class="nn">datopy.workflow</span> <span class="kn">import</span> <span class="n">doctest_function</span>
+
+    <span class="c1"># Comment out (2) to run all tests in script; (1) to run specific tests</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># doctest_function(customize_plots, globs=globals())</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Matthew Bain.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

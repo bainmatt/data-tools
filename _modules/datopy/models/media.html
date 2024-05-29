@@ -1,0 +1,853 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datopy.models.media &#8212; datopy manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autodoc_pydantic.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=f539c95a"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/datopy/models/media';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bainmatt.github.io/datopy/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">datopy manual</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">datopy.models.media</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for datopy.models.media</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Data models, validators, and ETL tools for scraped media data.</span>
+
+<span class="sd">Includes support for film reviews (via IMDb), music albums (via Spotify),</span>
+<span class="sd">and related information (via Wikipedia).</span>
+
+<span class="sd">.. note:: WIP.</span>
+
+<span class="sd">Highlights</span>
+<span class="sd">----------</span>
+
+<span class="sd">.. currentmodule:: datopy.models.media</span>
+
+<span class="sd">.. rubric:: Data models</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :nosignatures:</span>
+
+<span class="sd">    IMDbFilm</span>
+<span class="sd">    SpotifyAlbum</span>
+
+<span class="sd">API</span>
+<span class="sd">---</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Literal</span><span class="p">,</span>
+    <span class="n">NamedTuple</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Field</span><span class="p">,</span>
+    <span class="n">BaseModel</span><span class="p">,</span>
+    <span class="n">TypeAdapter</span><span class="p">,</span>
+    <span class="n">ValidationInfo</span><span class="p">,</span>
+    <span class="n">ValidationError</span><span class="p">,</span>
+    <span class="n">field_validator</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Annotated</span>
+
+<span class="kn">import</span> <span class="nn">imdb</span>
+<span class="kn">import</span> <span class="nn">spotipy</span>
+<span class="kn">import</span> <span class="nn">wptools</span>
+<span class="kn">from</span> <span class="nn">imdb</span> <span class="kn">import</span> <span class="n">Cinemagoer</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">spotipy.oauth2</span> <span class="kn">import</span> <span class="n">SpotifyClientCredentials</span>
+
+<span class="c1"># import datopy._settings</span>
+<span class="kn">from</span> <span class="nn">datopy.etl</span> <span class="kn">import</span> <span class="n">omit_string_patterns</span>
+<span class="kn">from</span> <span class="nn">datopy.workflow</span> <span class="kn">import</span> <span class="n">doctest_function</span>
+<span class="kn">from</span> <span class="nn">datopy.modeling</span> <span class="kn">import</span> <span class="n">BaseProcessor</span><span class="p">,</span> <span class="n">CustomTypes</span>
+
+
+<span class="c1"># --------------------------</span>
+<span class="c1"># --- Metadata retrieval ---</span>
+<span class="c1"># --------------------------</span>
+
+<span class="c1"># Custom type containing search terms with required &#39;title&#39; attribute</span>
+<span class="c1"># TODO archive this: does not generalize well</span>
+<span class="c1"># class MediaSearchTerms(NamedTuple):</span>
+<span class="c1">#     title: str</span>
+<span class="c1">#     creator: str | None = None</span>
+
+<span class="c1"># Film = NamedTuple(&#39;Film&#39;, [(&#39;title&#39;, str), (&#39;artist&#39;, None)])</span>
+<span class="c1"># Album = NamedTuple(&#39;Album&#39;, [(&#39;title&#39;, str), (&#39;artist&#39;, str)])</span>
+<span class="c1"># Book = NamedTuple(&#39;Book&#39;, [(&#39;title&#39;, str), (&#39;artist&#39;, str | None)])</span>
+
+
+<div class="viewcode-block" id="MediaQuery">
+<a class="viewcode-back" href="../../../models/datopy.models.media.MediaQuery.html#datopy.models.media.MediaQuery">[docs]</a>
+<span class="k">class</span> <span class="nc">MediaQuery</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Query object types for media metadata retrieval.</span>
+
+<span class="sd">    .. todo:: test</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">artist</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+
+<span class="n">Film</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Film&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">MediaQuery</span><span class="p">,),</span> <span class="p">{})</span>
+<span class="n">Album</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Album&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">MediaQuery</span><span class="p">,),</span> <span class="p">{})</span>
+<span class="n">Book</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">MediaQuery</span><span class="p">,),</span> <span class="p">{})</span>
+
+
+<span class="c1"># class MediaQuery:</span>
+<span class="c1">#     &quot;&quot;&quot;Query object types for media metadata retrieval.&quot;&quot;&quot;</span>
+<span class="c1">#     Film = Film</span>
+<span class="c1">#     Album = Album</span>
+<span class="c1">#     Book = Book</span>
+
+
+<div class="viewcode-block" id="IMDbFilm">
+<a class="viewcode-back" href="../../../models/datopy.models.media.html#datopy.models.media.IMDbFilm">[docs]</a>
+<span class="k">class</span> <span class="nc">IMDbFilm</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Data model for processed imdb metadata.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from pydantic import ValidationError</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.models.media import IMDbFilm</span>
+<span class="sd">    &gt;&gt;&gt; from datopy._examples import imdb_film_retrieve</span>
+
+<span class="sd">    Valid film</span>
+
+<span class="sd">    &gt;&gt;&gt; valid_film = IMDbFilm(</span>
+<span class="sd">    ...     title=&#39;name 10!&#39;, imdb_id=&#39;tt1234567&#39;, kind=&#39;movie&#39;,</span>
+<span class="sd">    ...     year=1990, rating=7.2, votes=122,</span>
+<span class="sd">    ...     genres=&#39;romantic comedy, thriller&#39;, cast=&#39;mrs smith,mr smith&#39;,</span>
+<span class="sd">    ...     plot=&#39;alas! once upon a time, ...&#39;,</span>
+<span class="sd">    ...     budget_mil=1123929)</span>
+
+<span class="sd">    Invalid film</span>
+
+<span class="sd">    &gt;&gt;&gt; invalid_film = dict(</span>
+<span class="sd">    ...     title=&#39;name&#39;, imdb_id=&#39;tt12&#39;, year=1975, votes=-2, rating=5.0)</span>
+<span class="sd">    &gt;&gt;&gt; try:</span>
+<span class="sd">    ...     IMDbFilm(**invalid_film)</span>
+<span class="sd">    ... except ValidationError as e:</span>
+<span class="sd">    ...     print(e)          # use pprint.pp(e.errors()) for easy-to-read list</span>
+<span class="sd">    3 validation errors for IMDbFilm</span>
+<span class="sd">    imdb_id</span>
+<span class="sd">      String should match pattern &#39;^tt.*\d{7}$&#39; [type=string_pattern_mismatch, input_value=&#39;tt12&#39;, input_type=str]</span>
+<span class="sd">        For further information visit https://errors.pydantic.dev/2.7/v/string_pattern_mismatch</span>
+<span class="sd">    kind</span>
+<span class="sd">      Field required [type=missing, input_value={&#39;title&#39;: &#39;name&#39;, &#39;imdb_i...tes&#39;: -2, &#39;rating&#39;: 5.0}, input_type=dict]</span>
+<span class="sd">        For further information visit https://errors.pydantic.dev/2.7/v/missing</span>
+<span class="sd">    votes</span>
+<span class="sd">      Input should be greater than or equal to 0 [type=greater_than_equal, input_value=-2, input_type=int]</span>
+<span class="sd">        For further information visit https://errors.pydantic.dev/2.7/v/greater_than_equal</span>
+
+<span class="sd">    Survey available fields and types</span>
+
+<span class="sd">    &gt;&gt;&gt; import pprint</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.models.media import Film</span>
+<span class="sd">    &gt;&gt;&gt; from datopy._examples import imdb_film_retrieve</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.modeling import apply_recursive</span>
+<span class="sd">    &gt;&gt;&gt; film = imdb_film_retrieve(Film(&#39;spirited away&#39;))</span>
+
+<span class="sd">    ..</span>
+<span class="sd">        # &gt;&gt;&gt; film.keys()</span>
+<span class="sd">        # &gt;&gt;&gt; pprint.pp(apply_recursive(lambda x: type(x).__name__, film), depth=3)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Identifiers</span>
+    <span class="n">title</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVnumstr</span>
+    <span class="n">imdb_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^tt.*\d</span><span class="si">{7}</span><span class="s1">$&#39;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Unique 7-digit IMDb tt identifier&quot;</span>
+    <span class="p">)</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVnumstr</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;movie&#39;</span><span class="p">,</span> <span class="s1">&#39;tv series&#39;</span><span class="p">],</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Retrieved from: `type`&quot;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Numeric</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">1880</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">3000</span><span class="p">)</span>
+    <span class="n">rating</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">votes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">runtime_mins</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">gt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># String lists</span>
+    <span class="n">genres</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVstr</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">countries</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVstr</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">director</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVstr</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">writer</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVstr</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">composer</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVstr</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">cast</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVstr</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># Strings</span>
+    <span class="n">plot</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVnumsent</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">synopsis</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVnumsent</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">plot_outline</span><span class="p">:</span> <span class="n">CustomTypes</span><span class="o">.</span><span class="n">CSVnumsent</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># Financial</span>
+    <span class="n">budget_mil</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Strip $/, &amp; text after first space&quot;</span>
+    <span class="p">)</span>
+    <span class="n">opening_weekend_gross_mil</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">cumulative_worldwide_gross_mil</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<div class="viewcode-block" id="IMDbFilm.check_alphanumeric">
+<a class="viewcode-back" href="../../../models/datopy.models.media.html#datopy.models.media.IMDbFilm.check_alphanumeric">[docs]</a>
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s1">&#39;imdb_id&#39;</span><span class="p">,</span> <span class="s1">&#39;kind&#39;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">check_alphanumeric</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">info</span><span class="p">:</span> <span class="n">ValidationInfo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="c1"># info.field_name is the name of the field being validated</span>
+            <span class="n">is_alphanumeric</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+            <span class="k">assert</span> <span class="n">is_alphanumeric</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">field_name</span><span class="si">}</span><span class="s1"> must be alphanumeric&#39;</span>
+        <span class="c1"># return v.title()</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+</div>
+
+
+
+<span class="c1"># TODO place media/animals/nations models/queries/processors in</span>
+<span class="c1"># {media/eco/global}_pulse.py</span>
+<span class="c1"># TODO implement 4 pydantic processed data models + 1 valid/invalid demo</span>
+
+<div class="viewcode-block" id="SpotifyAlbum">
+<a class="viewcode-back" href="../../../models/datopy.models.media.html#datopy.models.media.SpotifyAlbum">[docs]</a>
+<span class="k">class</span> <span class="nc">SpotifyAlbum</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Data model for processed Spotify metadata.</span>
+
+<span class="sd">    Raw data schema reference: &#39;datopy/output/spotify_album_schema.json&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># fields of interest:</span>
+
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">album_type</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="WikiBook">
+<a class="viewcode-back" href="../../../models/datopy.models.media.html#datopy.models.media.WikiBook">[docs]</a>
+<span class="k">class</span> <span class="nc">WikiBook</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Data model for processed Wikipedia novel metadata.</span>
+
+<span class="sd">    Raw data schema reference: &#39;output/wiki_book_schema.json&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># fields of interest:</span>
+
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="WikiFilm">
+<a class="viewcode-back" href="../../../models/datopy.models.media.html#datopy.models.media.WikiFilm">[docs]</a>
+<span class="k">class</span> <span class="nc">WikiFilm</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Data model for processed Wikipedia film metadata.</span>
+
+<span class="sd">    Raw data schema reference: &#39;datopy/output/wiki_film_schema.json&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># fields of interest:</span>
+
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="WikiAlbum">
+<a class="viewcode-back" href="../../../models/datopy.models.media.html#datopy.models.media.WikiAlbum">[docs]</a>
+<span class="k">class</span> <span class="nc">WikiAlbum</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Data model for processed Wikipedia album metadata.</span>
+
+<span class="sd">    Raw data schema reference: &#39;datopy/output/wiki_album_schema.json&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># fields of interest:</span>
+
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<span class="c1"># XXX Scratch tests</span>
+<span class="c1"># valid_obj = {}</span>
+<span class="c1"># invalid_obj = {}</span>
+<span class="c1"># pd.DataFrame(pd.json_normalize(dict(valid_obj)))</span>
+<span class="c1"># pd.DataFrame(pd.json_normalize(dict(invalid_obj)))</span>
+
+<span class="c1"># try: IMDbFilm(**valid_obj)</span>
+<span class="c1"># except ValidationError as e: pprint.pp(e.errors())</span>
+<span class="c1"># try: IMDbFilm(**invalid_obj)</span>
+<span class="c1"># except ValidationError as e: pprint.pp(e.errors())</span>
+
+
+<span class="c1"># --------------------------</span>
+<span class="c1"># --- Metadata retrieval ---</span>
+<span class="c1"># --------------------------</span>
+
+<span class="c1"># Subclass Processor</span>
+
+<span class="c1"># TODO move these to media</span>
+<span class="c1"># TODO implement 5 subclasses</span>
+
+<div class="viewcode-block" id="IMDbFilmProcessor">
+<a class="viewcode-back" href="../../../models/datopy.models.media.IMDbFilmProcessor.html#datopy.models.media.IMDbFilmProcessor">[docs]</a>
+<span class="k">class</span> <span class="nc">IMDbFilmProcessor</span><span class="p">(</span><span class="n">BaseProcessor</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    _summary_.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="IMDbFilmProcessor.retrieve">
+<a class="viewcode-back" href="../../../models/datopy.models.media.IMDbFilmProcessor.retrieve.html#datopy.models.media.IMDbFilmProcessor.retrieve">[docs]</a>
+    <span class="k">def</span> <span class="nf">retrieve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># title = self.query.title</span>
+
+        <span class="c1"># Retrieval routine</span>
+
+        <span class="n">obj</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+
+<div class="viewcode-block" id="IMDbFilmProcessor.process">
+<a class="viewcode-back" href="../../../models/datopy.models.media.IMDbFilmProcessor.process.html#datopy.models.media.IMDbFilmProcessor.process">[docs]</a>
+    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Processing routine</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+</div>
+
+
+
+<span class="c1"># XXX Scratch tests</span>
+<span class="c1"># IMDbFilm = []; Film = []</span>
+<span class="c1"># film = IMDbFilmProcessor(model=IMDbFilm, query=Film)</span>
+<span class="c1"># film.retrieve().process().to_df()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Comment out (2) to run all tests in script; (1) to run specific tests</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># doctest_function(IMDbFilm, globs=globals(), verbose=False)</span>
+
+    <span class="c1">## One-off tests</span>
+    <span class="k">pass</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Matthew Bain.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

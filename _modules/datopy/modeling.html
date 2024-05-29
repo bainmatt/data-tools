@@ -1,0 +1,1058 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datopy.modeling &#8212; datopy manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=f539c95a"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/datopy/modeling';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bainmatt.github.io/datopy/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">datopy manual</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../readme.html">
+                        Quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Core API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api_models.html">
+                        Models API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bainmatt/datopy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bainmatt.github.io/" title="Personal website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-link fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Personal website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">datopy.modeling</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for datopy.modeling</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tools for data modeling, validation, and raw data processing.</span>
+
+<span class="sd">.. note:: WIP.</span>
+
+<span class="sd">Highlights</span>
+<span class="sd">----------</span>
+
+<span class="sd">.. currentmodule:: datopy.modeling</span>
+
+<span class="sd">.. rubric:: Auto-generated data models</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :nosignatures:</span>
+
+<span class="sd">    list_to_dict</span>
+<span class="sd">    compare_dict_keys</span>
+<span class="sd">    apply_recursive</span>
+<span class="sd">    schema_jsonify</span>
+
+<span class="sd">.. rubric:: A flexible framework for ETL workflows</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :nosignatures:</span>
+
+<span class="sd">    BaseProcessor</span>
+
+<span class="sd">API</span>
+<span class="sd">---</span>
+
+<span class="sd">..</span>
+<span class="sd">    # Section headers references:</span>
+<span class="sd">    # https://docs.scipy.org/doc/scipy/reference/fft.html</span>
+<span class="sd">    # https://github.com/scipy/scipy/blob/main/scipy/fft/__init__.py</span>
+
+<span class="sd">    # https://matplotlib.org/3.9.0/api/axes_api.html</span>
+<span class="sd">    # https://github.com/matplotlib/matplotlib/blob/main/doc/api/axes_api.rst</span>
+
+<span class="sd">    # https://matplotlib.org/3.9.0/api/dates_api.html#matplotlib.dates</span>
+<span class="sd">    # https://github.com/matplotlib/matplotlib/blob/v3.9.0/lib/matplotlib/dates.py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">jsonschema</span> <span class="kn">import</span> <span class="n">validate</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Field</span><span class="p">,</span>
+    <span class="n">BaseModel</span><span class="p">,</span>
+    <span class="n">PositiveInt</span><span class="p">,</span>
+    <span class="n">ValidationError</span><span class="p">,</span>
+    <span class="n">field_validator</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Iterable</span><span class="p">,</span>
+    <span class="n">Collection</span><span class="p">,</span>
+    <span class="n">NamedTuple</span><span class="p">,</span>
+    <span class="n">TYPE_CHECKING</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Annotated</span><span class="p">,</span> <span class="n">TypeAliasType</span>
+
+<span class="c1"># import datopy._settings</span>
+<span class="kn">from</span> <span class="nn">datopy.workflow</span> <span class="kn">import</span> <span class="n">doctest_function</span>
+
+<span class="c1"># Custom types</span>
+<span class="c1"># (recursively) nested dict with arbitrary depth and pre-defined node type</span>
+<span class="c1"># TODO check this!</span>
+<span class="n">NestedDict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;NestedDict&quot;</span> <span class="o">|</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">GenericNestedDict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">object</span><span class="p">,</span> <span class="nb">object</span><span class="p">]</span>
+
+<span class="c1"># Define TypeVars</span>
+<span class="c1"># XXX remove unused</span>
+<span class="c1"># for dictionary (key/value type)</span>
+<span class="c1"># _KT = TypeVar(&#39;_KT&#39;)</span>
+<span class="c1"># _VT = TypeVar(&#39;_VT&#39;)</span>
+
+
+<span class="c1"># ----------------------------------------</span>
+<span class="c1"># --- Data dictionary generation utils ---</span>
+<span class="c1"># ----------------------------------------</span>
+
+<div class="viewcode-block" id="list_to_dict">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.list_to_dict.html#datopy.modeling.list_to_dict">[docs]</a>
+<span class="k">def</span> <span class="nf">list_to_dict</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">object</span><span class="p">]</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">object</span><span class="p">]</span> <span class="o">|</span> <span class="nb">set</span><span class="p">[</span><span class="nb">object</span><span class="p">],</span>
+    <span class="n">max_items</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">object</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Provide a dictionary representation of a list, using indices as keys.</span>
+
+<span class="sd">    Also compatible with other non-dictionary or string-like iterables.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    obj : list</span>
+<span class="sd">        A list to convert to a dictionary representation.</span>
+<span class="sd">    max_items : int, default=None</span>
+<span class="sd">        Option to impose a limit on the number of elements to iterate over.</span>
+<span class="sd">        Intended use: constructing pattern-based data models from a sample.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    res : dict</span>
+<span class="sd">        The supplied list&#39;s dictionary representation.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.modeling import list_to_dict</span>
+
+<span class="sd">    &gt;&gt;&gt; my_list = [1, &#39;two&#39;, [3], {&#39;four&#39;: 5}]</span>
+<span class="sd">    &gt;&gt;&gt; list_to_dict(my_list)</span>
+<span class="sd">    {1: 1, 2: &#39;two&#39;, 3: [3], 4: {&#39;four&#39;: 5}}</span>
+
+<span class="sd">    &gt;&gt;&gt; my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+<span class="sd">    &gt;&gt;&gt; list_to_dict(my_list, max_items=5)</span>
+<span class="sd">    {1: 1, 2: 2, 3: 3, 4: 4, 5: 5}</span>
+
+<span class="sd">    &gt;&gt;&gt; my_dict = dict(a=1, b=&#39;two&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; list_to_dict(my_dict)</span>
+<span class="sd">    Not running conversion since obj is already a dictionary.</span>
+<span class="sd">    {&#39;a&#39;: 1, &#39;b&#39;: &#39;two&#39;}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not running conversion since obj&quot;</span><span class="p">,</span>  <span class="c1"># type: ignore [unreachable]</span>
+              <span class="s2">&quot;is already a dictionary.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">obj</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{(</span><span class="n">key</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">max_items</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">key</span> <span class="o">&lt;</span> <span class="n">max_items</span><span class="p">)}</span></div>
+
+
+
+<div class="viewcode-block" id="compare_dict_keys">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.compare_dict_keys.html#datopy.modeling.compare_dict_keys">[docs]</a>
+<span class="k">def</span> <span class="nf">compare_dict_keys</span><span class="p">(</span>
+    <span class="n">dict1</span><span class="p">:</span> <span class="n">GenericNestedDict</span> <span class="o">|</span> <span class="nb">object</span><span class="p">,</span>
+    <span class="n">dict2</span><span class="p">:</span> <span class="n">GenericNestedDict</span> <span class="o">|</span> <span class="nb">object</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GenericNestedDict</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compare two dictionaries recursively and identify missing keys.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dict1 : dict</span>
+<span class="sd">        The reference dictionary.</span>
+<span class="sd">    dict2 : dict</span>
+<span class="sd">        The comparison dictionary to be checked against ``dict1``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    result : dict | List[str] | None</span>
+<span class="sd">        The nested dictionary of fields missing from</span>
+<span class="sd">        ``dict2`` relative ``dict1``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Setup</span>
+
+<span class="sd">    &gt;&gt;&gt; from datopy.modeling import compare_dict_keys</span>
+<span class="sd">    &gt;&gt;&gt; import copy</span>
+<span class="sd">    &gt;&gt;&gt; dict1 = {&#39;a1&#39;: 1, &#39;a2&#39;: &#39;two&#39;, &#39;a3&#39;: [3],</span>
+<span class="sd">    ...          &#39;b1&#39;: {&#39;b11&#39;: 1, &#39;b12&#39;: &#39;two&#39;, &#39;b13&#39;: [3]},</span>
+<span class="sd">    ...          &#39;c1&#39;: {&#39;c11&#39;: {&#39;c111&#39;: 1, &#39;c112&#39;: &#39;two&#39;, &#39;c113&#39;: [3]}}</span>
+<span class="sd">    ... }</span>
+
+<span class="sd">    &gt;&gt;&gt; from datopy.modeling import compare_dict_keys</span>
+
+<span class="sd">    Identical dictionaries</span>
+
+<span class="sd">    &gt;&gt;&gt; dict2 = copy.deepcopy(dict1)</span>
+<span class="sd">    &gt;&gt;&gt; compare_dict_keys(dict1, dict2)</span>
+
+<span class="sd">    Missing nesting level 0 key</span>
+
+<span class="sd">    &gt;&gt;&gt; del dict2[&#39;a1&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; compare_dict_keys(dict1, dict2)</span>
+<span class="sd">    {&#39;missing_keys&#39;: [&#39;a1&#39;]}</span>
+
+<span class="sd">    Missing nesting level 1 key</span>
+
+<span class="sd">    &gt;&gt;&gt; dict2 = copy.deepcopy(dict1)</span>
+<span class="sd">    &gt;&gt;&gt; del dict2[&#39;b1&#39;][&#39;b12&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; compare_dict_keys(dict1, dict2)</span>
+<span class="sd">    {&#39;nested_diff&#39;: {&#39;b1&#39;: {&#39;missing_keys&#39;: [&#39;b12&#39;]}}}</span>
+
+<span class="sd">    Missing nesting level 2 key</span>
+
+<span class="sd">    &gt;&gt;&gt; dict2 = copy.deepcopy(dict1)</span>
+<span class="sd">    &gt;&gt;&gt; del dict2[&#39;c1&#39;][&#39;c11&#39;][&#39;c113&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; compare_dict_keys(dict1, dict2)</span>
+<span class="sd">    {&#39;nested_diff&#39;: {&#39;c1&#39;: {&#39;nested_diff&#39;: {&#39;c11&#39;: {&#39;missing_keys&#39;: [&#39;c113&#39;]}}}}}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dict1</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dict2</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;missing nested dictionary&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">dict1</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dict2</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">missing_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">dict1</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">dict2</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">shared_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">dict1</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">dict2</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+
+    <span class="c1"># Initialize difference dictionary</span>
+    <span class="n">diff_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">object</span><span class="p">,</span> <span class="nb">object</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">shared_keys</span><span class="p">:</span>
+        <span class="n">nested_diff</span> <span class="o">=</span> <span class="n">compare_dict_keys</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">dict2</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="c1"># Add any differences to the difference</span>
+        <span class="k">if</span> <span class="n">nested_diff</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">diff_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">nested_diff</span>
+
+    <span class="c1"># Return result if no missing keys or no diffs in nested dicts found</span>
+    <span class="k">if</span> <span class="n">missing_keys</span> <span class="ow">or</span> <span class="n">diff_dict</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">object</span><span class="p">,</span> <span class="nb">object</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">missing_keys</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="s1">&#39;missing_keys&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">missing_keys</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">diff_dict</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="s1">&#39;nested_diff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">diff_dict</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="c1"># Return None if no missing keys or differences found</span>
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="apply_recursive">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.apply_recursive.html#datopy.modeling.apply_recursive">[docs]</a>
+<span class="k">def</span> <span class="nf">apply_recursive</span><span class="p">(</span>
+    <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="n">obj</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply ``func`` to each terminal value in a nested data structure.</span>
+
+<span class="sd">    Valid nested data structures include those with explicit or implied</span>
+<span class="sd">    key/value pairs.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    func : Callable[..., Any]</span>
+<span class="sd">        _description_</span>
+<span class="sd">    obj :</span>
+<span class="sd">        _description_</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict:</span>
+<span class="sd">        A tree-like dictionary representation of the transformed ``obj``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.modeling import apply_recursive</span>
+<span class="sd">    &gt;&gt;&gt; import pprint</span>
+
+<span class="sd">    Define the data</span>
+
+<span class="sd">    &gt;&gt;&gt; nested_data =  {</span>
+<span class="sd">    ...     &#39;type&#39;: &#39;album&#39;, &#39;url&#39;: &#39;link.com&#39;, &#39;audio_features&#39;: [</span>
+<span class="sd">    ...         {&#39;loudness&#39;: -11.4, &#39;duration_ms&#39;: 251},</span>
+<span class="sd">    ...         {&#39;loudness&#39;: -15.5, &#39;duration_ms&#39;: 284}</span>
+<span class="sd">    ...     ]</span>
+<span class="sd">    ... }</span>
+<span class="sd">    &gt;&gt;&gt; pprint.pp(nested_data)</span>
+<span class="sd">    {&#39;type&#39;: &#39;album&#39;,</span>
+<span class="sd">     &#39;url&#39;: &#39;link.com&#39;,</span>
+<span class="sd">     &#39;audio_features&#39;: [{&#39;loudness&#39;: -11.4, &#39;duration_ms&#39;: 251},</span>
+<span class="sd">                        {&#39;loudness&#39;: -15.5, &#39;duration_ms&#39;: 284}]}</span>
+
+<span class="sd">    Convert to json-friendly representation</span>
+
+<span class="sd">    &gt;&gt;&gt; serialized = apply_recursive(str, nested_data)</span>
+<span class="sd">    &gt;&gt;&gt; pprint.pp(serialized)</span>
+<span class="sd">    {&#39;type&#39;: &#39;album&#39;,</span>
+<span class="sd">     &#39;url&#39;: &#39;link.com&#39;,</span>
+<span class="sd">     &#39;audio_features&#39;: {1: {&#39;loudness&#39;: &#39;-11.4&#39;, &#39;duration_ms&#39;: &#39;251&#39;},</span>
+<span class="sd">                        2: {&#39;loudness&#39;: &#39;-15.5&#39;, &#39;duration_ms&#39;: &#39;284&#39;}}}</span>
+
+<span class="sd">    Convert to field/type pairs</span>
+
+<span class="sd">    &gt;&gt;&gt; schema = apply_recursive(lambda x: type(x).__name__, nested_data)</span>
+<span class="sd">    &gt;&gt;&gt; pprint.pp(schema)</span>
+<span class="sd">    {&#39;type&#39;: &#39;str&#39;,</span>
+<span class="sd">     &#39;url&#39;: &#39;str&#39;,</span>
+<span class="sd">     &#39;audio_features&#39;: {1: {&#39;loudness&#39;: &#39;float&#39;, &#39;duration_ms&#39;: &#39;int&#39;},</span>
+<span class="sd">                        2: {&#39;loudness&#39;: &#39;float&#39;, &#39;duration_ms&#39;: &#39;int&#39;}}}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Handle dictionary-like objects</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;items&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">apply_recursive</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+    <span class="c1"># Handle list-like objects</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">set</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">apply_recursive</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">list_to_dict</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">max_items</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+    <span class="c1"># Handle base cases</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="schema_jsonify">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.schema_jsonify.html#datopy.modeling.schema_jsonify">[docs]</a>
+<span class="k">def</span> <span class="nf">schema_jsonify</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">GenericNestedDict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GenericNestedDict</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    _summary_.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    schema : dict</span>
+<span class="sd">        _description_</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict : _description_</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pprint</span>
+<span class="sd">    &gt;&gt;&gt; from datopy.modeling import schema_jsonify</span>
+
+<span class="sd">    &gt;&gt;&gt; original_schema = {</span>
+<span class="sd">    ...     &#39;name&#39;: &#39;str&#39;, &#39;quantity&#39;: &#39;int&#39;,</span>
+<span class="sd">    ...     &#39;features&#39;: {</span>
+<span class="sd">    ...         1: {&#39;volume&#39;: &#39;str&#39;, &#39;duration&#39;: &#39;float&#39;},</span>
+<span class="sd">    ...         2: {&#39;volume&#39;: &#39;str&#39;, &#39;duration&#39;: &#39;float&#39;}</span>
+<span class="sd">    ...     },</span>
+<span class="sd">    ...     &#39;creator&#39;: {&#39;person&#39;: {&#39;name&#39;: &#39;str&#39;},</span>
+<span class="sd">    ...     &#39;company&#39;: {&#39;name&#39;: &#39;str&#39;, &#39;location&#39;: &#39;str&#39;}}</span>
+<span class="sd">    ... }</span>
+<span class="sd">    &gt;&gt;&gt; schema = schema_jsonify(original_schema)</span>
+<span class="sd">    &gt;&gt;&gt; schema = {**{&quot;title&quot;: &quot;title&quot;, &quot;description&quot;: &quot;description&quot;}, **schema}</span>
+<span class="sd">    &gt;&gt;&gt; pprint.pp(schema, compact=True, depth=3)</span>
+<span class="sd">    {&#39;title&#39;: &#39;title&#39;,</span>
+<span class="sd">     &#39;description&#39;: &#39;description&#39;,</span>
+<span class="sd">     &#39;type&#39;: &#39;object&#39;,</span>
+<span class="sd">     &#39;properties&#39;: {&#39;name&#39;: {&#39;type&#39;: &#39;string&#39;},</span>
+<span class="sd">                    &#39;quantity&#39;: {&#39;type&#39;: &#39;number&#39;},</span>
+<span class="sd">                    &#39;features&#39;: {&#39;type&#39;: &#39;array&#39;,</span>
+<span class="sd">                                 &#39;minItems&#39;: 1,</span>
+<span class="sd">                                 &#39;maxItems&#39;: 2,</span>
+<span class="sd">                                 &#39;uniqueItems&#39;: True,</span>
+<span class="sd">                                 &#39;items&#39;: {...}},</span>
+<span class="sd">                    &#39;creator&#39;: {&#39;type&#39;: &#39;object&#39;,</span>
+<span class="sd">                                &#39;properties&#39;: {...},</span>
+<span class="sd">                                &#39;required&#39;: [...]}},</span>
+<span class="sd">     &#39;required&#39;: [&#39;name&#39;, &#39;quantity&#39;, &#39;features&#39;, &#39;creator&#39;]}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">schema</span><span class="p">:</span> <span class="n">GenericNestedDict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">is_dict</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+
+    <span class="c1"># Case 1 (array-like)</span>
+    <span class="k">if</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">is_dict</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="n">field_len</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span>  <span class="c1"># coerced to object; includes tuple/list</span>
+            <span class="s2">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;maxItems&quot;</span><span class="p">:</span> <span class="n">field_len</span><span class="p">,</span>
+            <span class="s2">&quot;uniqueItems&quot;</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="p">}</span>
+        <span class="c1"># Recurse on first item, assuming homogeneity for simplicity</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">schema_jsonify</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># type: ignore [arg-type]</span>
+        <span class="k">return</span> <span class="n">schema</span>
+
+    <span class="c1"># Case 2 (dictionary)</span>
+    <span class="k">elif</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">is_dict</span><span class="p">:</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;object&quot;</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># Require all by default to easily edit later</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;required&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1"># Recurse on each value</span>
+            <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">schema_jsonify</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>  <span class="c1"># type: ignore [index, arg-type]</span>
+        <span class="k">return</span> <span class="n">schema</span>
+
+    <span class="c1"># Base cases (non-container types)</span>
+    <span class="k">elif</span> <span class="n">obj</span> <span class="o">==</span> <span class="s2">&quot;str&quot;</span><span class="p">:</span>  <span class="c1"># type: ignore [comparison-overlap]</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
+        <span class="k">return</span> <span class="n">schema</span>
+
+    <span class="k">elif</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="s2">&quot;float&quot;</span><span class="p">):</span>  <span class="c1"># type: ignore [comparison-overlap]</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;number&quot;</span>
+        <span class="k">return</span> <span class="n">schema</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;null&quot;</span>
+        <span class="k">return</span> <span class="n">schema</span></div>
+
+
+
+<span class="c1"># --------------------------------------------</span>
+<span class="c1"># --- Data processing base types and class ---</span>
+<span class="c1"># --------------------------------------------</span>
+
+<span class="c1"># TODO replace these with field validators -- either general or model-specific</span>
+<div class="viewcode-block" id="CustomTypes">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.CustomTypes.html#datopy.modeling.CustomTypes">[docs]</a>
+<span class="k">class</span> <span class="nc">CustomTypes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Define reusable custom field types.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Whitespace around commas should be stripped before analysis.</span>
+<span class="sd">    For additional info on Pydantic custom types, see:</span>
+<span class="sd">    https://docs.pydantic.dev/latest/concepts/types/.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CSVstr</span> <span class="o">=</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z, ]+$&#39;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;:attr:`~datopy.modeling.CustomTypes` : ``CSVstr``&quot;</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Lowercase comma-separated string.</span>
+<span class="sd">    Excludes numerics and special characters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CSVnumstr</span> <span class="o">=</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9,.! ]+$&#39;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;:attr:`~datopy.modeling.CustomTypes` : ``CSVnumstr``&quot;</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Lowercase comma-separated string.</span>
+<span class="sd">    Allows numerics; excludes special characters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CSVnumsent</span> <span class="o">=</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9,.! ]+$&#39;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;:attr:`~datopy.modeling.CustomTypes` : ``CSVnumsent``&quot;</span><span class="p">),</span>
+    <span class="p">]</span></div>
+
+
+
+<span class="c1"># TODO implement BaseProcessor</span>
+<div class="viewcode-block" id="BaseProcessor">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.BaseProcessor.html#datopy.modeling.BaseProcessor">[docs]</a>
+<span class="k">class</span> <span class="nc">BaseProcessor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    _summary_.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : BaseModel</span>
+<span class="sd">        _description_</span>
+<span class="sd">    query : NamedTuple</span>
+<span class="sd">        _description_</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="n">NamedTuple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+
+<div class="viewcode-block" id="BaseProcessor.retrieve">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.BaseProcessor.retrieve.html#datopy.modeling.BaseProcessor.retrieve">[docs]</a>
+    <span class="k">def</span> <span class="nf">retrieve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data for the query from the API of the supplied model.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            NotImplementedError: _description_</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">### Retrieval routine goes here</span>
+
+        <span class="c1">###</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+        <span class="c1"># include return here? self assignment?</span>
+
+<div class="viewcode-block" id="BaseProcessor.process">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.BaseProcessor.process.html#datopy.modeling.BaseProcessor.process">[docs]</a>
+    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Process (extract/clean) the retrieved data.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            NotImplementedError: _description_</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">### Processing routine goes here</span>
+
+        <span class="c1">###</span>
+        <span class="c1"># TODO raise NotRetrieved error (try model.obj)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate the processed data against the supplied model.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">            ValidationError: _description_</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span>
+        <span class="n">model</span>
+        <span class="c1"># try:</span>
+        <span class="c1">#     model(**self.data)</span>
+        <span class="c1"># except ValidationError as e:</span>
+        <span class="c1">#     pprint.pp(e.errors())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validated&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="BaseProcessor.to_df">
+<a class="viewcode-back" href="../../datopy/datopy.modeling.BaseProcessor.to_df.html#datopy.modeling.BaseProcessor.to_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load the data into a dataframe for further processing or analysis.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Validate before loading</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate</span><span class="p">()</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">df</span></div>
+</div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Comment out line 2 to run all tests; line 1 to run specific tests.</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># doctest_function(object=BaseProcessor, globs=globals())</span>
+
+    <span class="c1"># Type checks that the compiler does not see or understand.</span>
+    <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+        <span class="c1"># reveal_type((1, &#39;hello&#39;))</span>
+        <span class="k">pass</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Matthew Bain.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
